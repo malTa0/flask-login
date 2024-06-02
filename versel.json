@@ -1,0 +1,11 @@
+{
+    "version":2,
+    "builds":[
+        {
+            "src":"run.py","use":"@versel/python"
+        }
+    ],
+    "routes":[
+        {"src": "/(.*)", "dest": "run.py"}
+    ]
+}
