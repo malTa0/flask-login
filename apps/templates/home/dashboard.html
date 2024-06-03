@@ -1,0 +1,389 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!--[ daily sales section ] start-->
+                               
+                                
+                                <!--[ Monthly  sales section ] end-->
+                                
+                                <!--[ year  sales section ] end-->
+                                <!--[ Recent Users ] start-->
+                                <div class="col-xl-8 col-md-6">
+                                    <div class="card Recent-Users">
+                                        <div class="card-header">
+                                            <h5>The Most 5 Websites used in Scraping</h5>
+                                        </div>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                    <tbody>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/hesspress.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">Hespress - هسبريس</h6>
+                                                            <p class="m-0">https://www.hespress.com/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>Scraping Active</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://www.hespress.com/" class="label theme-bg text-white f-12">Visit</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/aljazira.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1"> aljazeera - الجزيرة نت</h6>
+                                                            <p class="m-0">https://www.aljazeera.net/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>Scraping Active</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://www.aljazeera.net/" class="label theme-bg text-white f-12">Visit</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/akhbarak.png" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">akhbarak - أخبارك</h6>
+                                                            <p class="m-0">https://akhbarak.net/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>Scraping Done</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://akhbarak.net/" class="label theme-bg text-white f-12">Visit</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/CGTN.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">CGTN Arabic - </h6>
+                                                            <p class="m-0">https://arabic.cgtn.com/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>Scraping Done</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://arabic.cgtn.com/" class="label theme-bg text-white f-12">Visit</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/2m.png" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">2M</h6>
+                                                            <p class="m-0">https://2m.ma/ar/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>Scraping Done</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://2m.ma/ar/" class="label theme-bg text-white f-12">Visit</a>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="card user-list">
+                                        <div class="card-header">
+                                            <h5>Top Keywords in the Web  </h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center m-b-20">
+                                                <div class="col-6">
+                                                    <h2 class="f-w-300 d-flex align-items-center float-left m-0">TOP KEYWORDS<i
+                                                            class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="d-flex  align-items-center float-right m-0"><i
+                                                            class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>فلسطين</h6>
+                                                    <h6 class="align-items-center float-right">200</h6>
+                                                    <div class="progress m-t-30 m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>الأصالة_والمعاصرة</h6>
+                                                    <h6 class="align-items-center float-right">180</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i> رفح</h6>
+                                                    <h6 class="align-items-center float-right">130</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i> المنتخب_المغربي</h6>
+                                                    <h6 class="align-items-center float-right">78</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 28%;" aria-valuenow="28" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i> عيد_الأضحى</h6>
+                                                    <h6 class="align-items-center float-right">44</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar" role="progressbar" style="width:18%;"
+                                                                aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="col-xl-8 col-md-6">
+                                    <div class="card Recent-Users">
+                                        <div class="card-header">
+                                            <h5>The Most 4 Social Media Pages used in Scraping</h5>
+                                        </div>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                    <tbody>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/hesspress.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">Hespress - هسبريس</h6>
+                                                            <p class="m-0">https://web.facebook.com/Hespress</p>
+                                                            <p class="m-0">https://www.instagram.com/hespress/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>Scraping Active</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://web.facebook.com/Hespress" class="label theme-bg text-white f-12">Visit FB Page</a>
+                                                                <a
+                                                                href="https://www.instagram.com/hespress/" class="label theme-bg text-white f-12">Visit IG Page</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/aljazira.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1"> aljazeera - الجزيرة نت</h6>
+                                                            <p class="m-0">https://web.facebook.com/Aljazeeradoc</p>
+                                                            <p class="m-0">https://www.instagram.com/aljazeera.net/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>Scraping Done</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://web.facebook.com/Aljazeeradoc" class="label theme-bg text-white f-12">Visit FB Page</a>
+                                                                <a
+                                                                href="https://www.instagram.com/aljazeera.net/" class="label theme-bg text-white f-12">Visit IG Page</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/akhbarak.png" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">akhbarak - أخبارك</h6>
+                                                            <p class="m-0">https://web.facebook.com/Akhbarak</p>
+                                                            <p class="m-0">https://www.instagram.com/akhbarak/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-red f-10 m-r-15"></i>Scraping Done</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://web.facebook.com/Akhbarak" class="label theme-bg text-white f-12">Visit FB Page</a>
+                                                                <a
+                                                                href="https://www.instagram.com/akhbarak/" class="label theme-bg text-white f-12">Visit IG Page</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="{{ config.ASSETS_ROOT }}/images/user/CGTN.jpeg" alt="activity-user">
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="mb-1">CGTN Arabic  </h6>
+                                                            <p class="m-0">https://web.facebook.com/cgtnarabic</p>
+                                                            <p class="m-0">https://www.instagram.com/cgtnarabic/</p>
+                                                        </td>
+                                                        <td>
+                                                            <h6 class="text-muted"><i
+                                                                    class="fas fa-circle text-c-green f-10 m-r-15"></i>Scraping Active</h6>
+                                                        </td>
+                                                        <td><a
+                                                                href="https://arabic.cgtn.com/" class="label theme-bg text-white f-12">Visit FB Page</a>
+                                                                <a
+                                                                href="https://www.instagram.com/cgtnarabic/" class="label theme-bg text-white f-12">Visit IG Page</a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <!-- [ rating list ] starts-->
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="card user-list">
+                                        <div class="card-header">
+                                            <h5>Top Voices in Web </h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center m-b-20">
+                                                <div class="col-6">
+                                                    <h2 class="f-w-300 d-flex align-items-center float-left m-0">6 TOP Voices<i
+                                                            class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h6 class="d-flex  align-items-center float-right m-0"><i
+                                                            class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>الملك_محمد_السادس</h6>
+                                                    <h6 class="align-items-center float-right">406</h6>
+                                                    <div class="progress m-t-30 m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>ليلي_بنعلي</h6>
+                                                    <h6 class="align-items-center float-right">316</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i> ياسين بونو</h6>
+                                                    <h6 class="align-items-center float-right">200</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i>  إبراهيم دياز</h6>
+                                                    <h6 class="align-items-center float-right">87</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar progress-c-theme" role="progressbar"
+                                                                style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <h6 class="align-items-center float-left"><i
+                                                            class="fas fa-star f-10 m-r-10 text-c-yellow"></i> عبد_اللطيف_وهبي</h6>
+                                                    <h6 class="align-items-center float-right">40</h6>
+                                                    <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                        <div class="progress-bar" role="progressbar" style="width:18%;"
+                                                                aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                
+                                  
+                                
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->            
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+    <!-- chart-morris Js -->
+    <script src="{{ config.ASSETS_ROOT }}/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="{{ config.ASSETS_ROOT }}/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="{{ config.ASSETS_ROOT }}/js/pages/chart-morris-custom.js"></script>
+    
+
+{% endblock javascripts %}
+    

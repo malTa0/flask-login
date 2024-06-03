@@ -1,0 +1,344 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Charts {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Social Media Statistics</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ Morris Chart ] start -->
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Words importances in the social media</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-bar-chart" style="height:300px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>words sentiment analysis in social media </h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-bar-stacked-chart" style="height:300px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <!-- [ Morris Chart ] end -->
+                                
+
+                                
+                                
+                                <!--<div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Facebook Comments Sentiment Analysis </h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-donut-chart" style="height:200px"></div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-donut-chart" style="height:200px"></div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                
+                                <!--<div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Words</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <button type="button" class="btn btn-primary" id="word1">فلسطين</button>
+                                            <button type="button" class="btn btn-success" id="word2">المغرب</button>
+                                            <button type="button" class="btn btn-primary" id="word3">أخنوش</button>
+                                            <button type="button" class="btn btn-success" id="word3">قصف</button>
+                                            <button type="button" class="btn btn-primary" id="word3">وزير_العدل</button>
+                                            <button type="button" class="btn btn-success" id="word3">كرة_القدم</button>
+                                            <button type="button" class="btn btn-primary" id="word3">الرباط</button>
+                                            <button type="button" class="btn btn-success" id="word3">إقليم_الحوز</button>
+                                            <button type="button" class="btn btn-primary" id="word1">فلسطين</button>
+                                            <button type="button" class="btn btn-success" id="word2">المغرب</button>
+                                            <button type="button" class="btn btn-primary" id="word3">أخنوش</button>
+                                            <button type="button" class="btn btn-success" id="word3">قصف</button>
+                                            <button type="button" class="btn btn-primary" id="word3">وزير_العدل</button>
+                                            <button type="button" class="btn btn-success" id="word3">كرة_القدم</button>
+                                            <button type="button" class="btn btn-primary" id="word3">الرباط</button>
+                                            <button type="button" class="btn btn-success" id="word3">إقليم_الحوز</button>
+                                            
+                                        </div>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>-->
+                            <!-- [ rating list ] starts-->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card user-list">
+                                    <div class="card-header">
+                                        <h5>Top Hashtags in Instagram </h5>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="row align-items-center justify-content-center m-b-20">
+                                            <div class="col-6">
+                                                <h2 class="f-w-300 d-flex align-items-center float-left m-0">#6 TOP HASHTAGS<i
+                                                        class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
+                                            </div>
+                                            <div class="col-6">
+                                                <h6 class="d-flex  align-items-center float-right m-0"><i
+                                                        class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>فلسطين#</h6>
+                                                <h6 class="align-items-center float-right">4K</h6>
+                                                <div class="progress m-t-30 m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> رفح#</h6>
+                                                <h6 class="align-items-center float-right">2K</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> المغرب#</h6>
+                                                <h6 class="align-items-center float-right">1K</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 77%;" aria-valuenow="77" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> المنتخب_المغربي#</h6>
+                                                <h6 class="align-items-center float-right">867</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> عبد_اللطيف_وهبي#</h6>
+                                                <h6 class="align-items-center float-right">40</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width:10%;"
+                                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ rating list ] starts-->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card user-list">
+                                    <div class="card-header">
+                                        <h5>Top Hashtags in Facebook </h5>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="row align-items-center justify-content-center m-b-20">
+                                            <div class="col-6">
+                                                <h2 class="f-w-300 d-flex align-items-center float-left m-0">#6 TOP HASHTAGS<i
+                                                        class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
+                                            </div>
+                                            <div class="col-6">
+                                                <h6 class="d-flex  align-items-center float-right m-0"><i
+                                                        class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>فلسطين#</h6>
+                                                <h6 class="align-items-center float-right">384</h6>
+                                                <div class="progress m-t-30 m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>عيد_الأضحى #</h6>
+                                                <h6 class="align-items-center float-right">245</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> #ريال_مدريد#</h6>
+                                                <h6 class="align-items-center float-right">182</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i># المنتخب_المغربي</h6>
+                                                <h6 class="align-items-center float-right">96</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> #كرة_القدم </h6>
+                                                <h6 class="align-items-center float-right">50</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width:18%;"
+                                                            aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ rating list ] starts-->
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card user-list">
+                                    <div class="card-header">
+                                        <h5>Top Hashtags in Tweeter </h5>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="row align-items-center justify-content-center m-b-20">
+                                            <div class="col-6">
+                                                <h2 class="f-w-300 d-flex align-items-center float-left m-0">#6 TOP HASHTAGS<i
+                                                        class="fas fa-star f-10 m-l-10 text-c-yellow"></i></h2>
+                                            </div>
+                                            <div class="col-6">
+                                                <h6 class="d-flex  align-items-center float-right m-0"><i
+                                                        class="fas fa-caret-up text-c-green f-22 m-l-10"></i></h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>الكيان الصهيوني#</h6>
+                                                <h6 class="align-items-center float-right">6K</h6>
+                                                <div class="progress m-t-30 m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 98%;" aria-valuenow="98" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>المغرب#</h6>
+                                                <h6 class="align-items-center float-right">4K</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> محمد السادس#</h6>
+                                                <h6 class="align-items-center float-right">2K</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i> ناصر بوريطة#</h6>
+                                                <h6 class="align-items-center float-right">479</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar progress-c-theme" role="progressbar"
+                                                            style="width: 44%;" aria-valuenow="44" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h6 class="align-items-center float-left"><i
+                                                        class="fas fa-star f-10 m-r-10 text-c-yellow"></i>جندي مغربي#</h6>
+                                                <h6 class="align-items-center float-right">370</h6>
+                                                <div class="progress m-t-30  m-b-20" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width:13%;"
+                                                            aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <!-- chart-morris Js -->
+    <script src="{{ config.ASSETS_ROOT }}/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="{{ config.ASSETS_ROOT }}/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="{{ config.ASSETS_ROOT }}/js/pages/chart-morris-custom.js"></script>
+
+{% endblock javascripts %}
